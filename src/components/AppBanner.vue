@@ -2,8 +2,8 @@
 export default {
     data() {
         return {
-           title: "gattino",
-           image: "gattino.jpeg"
+            title: "gattino",
+            image: "gattino.jpeg"
         };
     },
     methods: {
@@ -15,11 +15,33 @@ export default {
 </script>
 
 <template>
-    <div class="banner">
-        <h2>{{ title }}</h2>
-        <img :src="getImagePath(image)" alt="" />
-    </div>
+    <body>
+        <div class="banner">
+            <h2>{{ title }}</h2>
+
+            <div class="cat"><img :src="getImagePath(image)" alt="" /></div>
+        </div>
+    </body>
 </template>
 
 <style>
+body {
+    display: flex;
+    flex-direction: column;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    padding: 30px;
+}
+.banner {
+    background-color: lightblue;
+}
+.cat {
+    display: flex;
+    justify-content: center;
+}
 </style>
